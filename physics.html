@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Physics Classroom</title>
+	<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous" />
+
+	<link rel="stylesheet" type="text/css" href=
+"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<style>
+		.navbar-nav.navbar-center {
+			position: absolute;
+			left: 50%;
+			transform: translatex(-50%);
+			background-color: #B5FFD9;
+		}
+        body{
+            background-color: #96BAFF;
+        }
+		.notice{
+			width: 1250px;
+			height: 100px;
+			background-color: #38A3A5;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<!--NAVBAR STARTING-->
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand text-success" href="#">
+			Physics
+			</a>
+			<button class="navbar-toggler" type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+                    aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse"
+				id="navbarSupportedContent">
+				<ul class=" nav navbar-nav navbar-center">
+					<li class="nav-item active">
+						<a class="nav-link"
+						href="#">
+						Stream
+						<span class="sr-only">
+							(current)
+						</span>
+					</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"
+						href="#">
+						Classwork
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"
+						href="#">
+						People
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <div style = "text-align:center; ">
+        <canvas id="myCanvas" width="900" height="300"
+        style="border: 5px solid #d3d3d3; overflow: hidden; background-color: #FDF5CA;">
+       
+        </canvas>
+    </div>
+    <div style = "text-align:center;  ">
+        <canvas id="Canvas2" width="200" height="100"
+        style="border: 5px solid #d3d3d3; background-color: #D5EEBB; overflow: hidden;">
+       
+        </canvas>
+    </div>
+	<input class="notice" id="text" placeholder="type for the whole class">
+    
+        
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+var ctx=canvas.getContext("2d");
+ctx.font="50px Comic Sans MS";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+ctx.fillText("Physics", canvas.width/2, canvas.height/2);
+
+
+var Canvastwo = document.getElementById("Canvas2");
+var ctx=Canvastwo.getContext("2d");
+ctx.font="20px Comic Sans MS";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+
+ctx.fillText("NOTICE", Canvastwo.width/2,Canvastwo.height/2);
+
+
+    </script>
+</body>
+
+</html>
